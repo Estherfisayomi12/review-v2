@@ -1,0 +1,176 @@
+.main {
+  background-color: white;
+
+  grid-column: col-start 1 / col-end 10;
+
+  @media only screen and(max-width: $bp-large) {
+    grid-column: col-start 2 / col-end 11;
+  }
+
+  @media only screen and(max-width: $bp-medium) {
+    grid-column: col-start 1 / col-end 10;
+  }
+
+  display: grid;
+  grid-template-rows: 12rem repeat(4, min-content);
+  grid-template-columns:
+    [new-full-start] minmax(6rem, 1fr)
+    [new-center-start] repeat(
+      8,
+      [new-col-start] minmax(min-content, 14rem) [new-col-end]
+    )
+    [new-center-end] minmax(6rem, 1fr)
+    [new-full-end];
+
+  @media only screen and(max-width: $bp-small) {
+    padding: 2rem;
+  }
+
+  @media only screen and(max-width: $bp-tiny) {
+    grid-template-rows: 8rem repeat(4, min-content);
+  }
+
+  &__handles {
+    background-color: white;
+    grid-column: new-col-start 7 / new-full-end;
+
+    @media only screen and(max-width: $bp-small) {
+      grid-column: new-full-start / new-full-end;
+    }
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem 3rem 2rem 0.5rem;
+
+    @media only screen and(max-width: $bp-small) {
+      justify-content: start;
+    }
+
+    a,
+    :active,
+    :visited {
+      border-radius: 100%;
+      border: 1px solid rgba($color-grey-dark, 0.3);
+      padding: 1rem;
+      text-align: center;
+
+      @media only screen and(max-width: $bp-tiny) {
+        padding: 0.5rem;
+      }
+    }
+
+    &--sub,
+    &--label {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: $color-grey-dark;
+    }
+
+    &--button {
+      button {
+        display: flex;
+        align-items: center;
+
+        cursor: pointer;
+        padding: 0.1rem 1rem;
+        background-color: white;
+        border: 1px solid $color-grey-dark;
+        box-shadow: 0 0 3px green;
+
+        a {
+          border: none;
+          text-decoration: none;
+          color: $color-grey-dark;
+        }
+      }
+    }
+  }
+
+  &__heading {
+    grid-column: new-center-start / new-col-end 5;
+
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and(max-width: $bp-small) {
+      grid-column: new-full-start / new-full-end;
+    }
+
+    margin-bottom: 10rem;
+    text-transform: capitalize;
+    &--1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      font-weight: 600;
+      color: red;
+    }
+
+    &--2 {
+      font-size: 1.6rem;
+      color: rgb(116, 17, 17);
+    }
+  }
+
+  &__stories {
+    grid-column: new-col-start 2 / new-col-end 7;
+
+    @media only screen and(max-width: $bp-medium) {
+      grid-column: new-col-start 1 / new-col-end 8;
+    }
+
+    @media only screen and(max-width: $bp-small) {
+      grid-column: new-full-start / new-full-end;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.6rem;
+
+    & > * {
+      margin-bottom: 3rem;
+    }
+
+    &--h1 {
+      color: $color-grey-dark;
+      font-weight: 400;
+    }
+
+    &--h2 {
+      font-weight: 600;
+    }
+
+    a,
+    :active,
+    :visited {
+      display: inline-block;
+      color: red;
+      font-weight: 600;
+    }
+  }
+
+  &__account {
+    border-top: $border-bottom;
+
+    grid-column: new-full-start/ new-full-end;
+
+    font-size: 1.6rem;
+
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 3rem;
+
+    padding: 7rem 0;
+
+    @media only screen and(max-width: $bp-tiny) {
+      padding: 3rem 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

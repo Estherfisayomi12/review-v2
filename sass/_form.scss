@@ -1,0 +1,142 @@
+.logo {
+  grid-column: col-form-start 3 / col-form-end 10;
+  margin-top: 5rem;
+
+  color: $color-grey-dark;
+
+  @media only screen and(max-width: $bp-large) {
+    margin-left: 4rem;
+  }
+}
+
+.form {
+  grid-column: col-form-start 4 / col-form-end 7;
+
+  @media only screen and(max-width: $bp-large) {
+    margin: 0 20rem;
+  }
+
+  @media only screen and(max-width: $bp-medium) {
+    margin: 0 13rem;
+  }
+  @media only screen and(max-width: $bp-small) {
+    margin: 0 6rem;
+  }
+
+  @media only screen and(max-width: 400px) {
+    margin: 0 1rem;
+  }
+
+  display: grid;
+  background-color: white;
+  box-shadow: 0 0 0.5rem rgba($color-grey-dark, 0.2);
+  border: 5px;
+  grid-gap: 2rem;
+  font-size: 1.3rem;
+  text-align: center;
+
+  .sign {
+    display: flex;
+    &__button {
+      width: 100%;
+      padding: 1.5rem;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+    }
+    a {
+      color: $color-grey-dark;
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+    &__in {
+      border: 1px thin rgba($color-grey-dark, 0.4);
+      background-color: $color-grey-light;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    color: $color-grey-dark;
+  }
+
+  a {
+    color: white;
+  }
+
+  button {
+    color: white;
+  }
+  &__body {
+    display: grid;
+    grid-gap: 2rem;
+    padding: 0rem 4rem 4rem 4rem;
+    @media only screen and(max-width: $bp-medium) {
+      padding: 0 2rem 2rem 2rem;
+    }
+
+    input {
+      border: none;
+      border-bottom: $border-bottom;
+      padding: 1.5rem 0;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+
+      &:focus {
+        outline: none;
+
+        &::placeholder {
+          transform: translateY(-1.28rem);
+        }
+      }
+    }
+  }
+
+  &__name {
+    display: flex;
+    justify-content: stretch;
+
+    & > * {
+      width: 50%;
+    }
+  }
+}
+
+.a-red {
+  color: red !important;
+}
+.footer-form {
+  grid-column: col-form-start / col-form-end 10;
+
+  text-align: center;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  opacity: 0.7;
+  margin-bottom: 3rem;
+
+  @media only screen and(max-width: $bp-medium) {
+    margin-bottom: 1rem;
+  }
+
+  a,
+  a:visited,
+  a:active {
+    color: $color-grey-dark;
+
+    :hover {
+      color: orangered;
+    }
+  }
+}
+
+.error {
+  border: 1px solid red;
+}
+.success {
+  border: 1px solid green;
+}

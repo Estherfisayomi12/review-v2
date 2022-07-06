@@ -1,0 +1,85 @@
+$color-grey-light: rgb(241, 238, 238);
+$color-grey-dark: rgb(63, 63, 63);
+$border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+//RESPONSIVE BREAKPOINTS
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+$bp-tiny: 18.75em; //300px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  color: $color-grey-dark;
+  background-color: $color-grey-light;
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 4.8rem min-content 4.8rem;
+  grid-template-columns:
+    [ full-start] minmax(6rem, 1fr)
+    [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr)
+    [full-end];
+
+  grid-gap: 6rem;
+
+  @media only screen and(max-width: $bp-large) {
+    grid-template-columns: repeat(
+      12,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    );
+  }
+
+  @media only screen and(max-width: $bp-medium) {
+    grid-template-columns: repeat(
+      10,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    );
+  }
+
+  @media only screen and(max-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  @media only screen and(max-width: $bp-tiny) {
+    grid-gap: 2rem;
+  }
+}
+
+.form-container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(
+    10,
+    [col-form-start] minmax(min-content, 14rem) [col-form-end]
+  );
+  grid-gap: 8rem;
+
+  @media only screen and(max-width: $bp-large) {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,78 @@
+.main__account--button {
+  display: flex;
+  justify-content: center;
+  column-gap: 3rem;
+
+  @media only screen and(max-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    row-gap: 3rem;
+  }
+
+  &-1,
+  &-2 {
+    padding: 2rem 6rem;
+    background-color: orangered;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    a,
+    :active,
+    :visited {
+      color: white;
+    }
+
+    &:hover {
+      box-shadow: 0 1px 5px rgba($color-grey-dark, 0.3);
+      transform: translateY(-3px);
+    }
+
+    @media only screen and(max-width: $bp-tiny) {
+      padding: 1.5rem 3rem;
+    }
+  }
+
+  &-2 {
+    background-color: transparent;
+    border: 1px solid orangered;
+
+    a,
+    :active,
+    :visited {
+      color: orangered;
+
+      :hover {
+        color: orangered;
+      }
+    }
+  }
+}
+
+.sign-in-button {
+  display: grid;
+  grid-gap: 2rem;
+
+  a,
+  :active,
+  :visited {
+    text-decoration: none;
+  }
+}
+.sign-in-facebook {
+  background-color: rgb(7, 7, 104);
+}
+
+.sign-in-google {
+  background-color: transparent;
+  color: $color-grey-dark;
+  border: 1px solid $color-grey-dark;
+
+  a,
+  :active,
+  :visited {
+    color: red !important;
+  }
+}
