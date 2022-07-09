@@ -16,13 +16,15 @@
   <body class="container">
     <nav class="nav">
       <div>
-        <a class="nav__item-1" href="">Home</a>
+        <a class="nav__item-1" href="/index.html">Home</a>
       </div>
       <div class="nav-submission">
         <svg class="main__handles--sub">
           <use xlink:href="img/sprite.svg#icon-folder-minus"></use>
         </svg>
-        <a class="nav__item-2" href="#">View your submissions</a>
+        <a href="/form.html" class="nav__item-2" target="_blank"
+          >Upload your submission</a
+        >
       </div>
     </nav>
 
@@ -155,13 +157,10 @@
         <p class="main__stories--h2">
           We use Lorem ipsum dolor sit amet consectetur adipisicing elit.!
         </p>
-        <div class="main__account--button">
-          <button class="main__account--button-1">
-            <a href="./sign-up.html">Create your account</a>
-          </button>
-          <button class="main__account--button-2">
-            <a href="./sign-in.html">Have an account? sign in</a>
-          </button>
+        <div>
+          <a href="/form.html" class="main__account--button"
+            >Upload your submissions</a
+          >
         </div>
       </div>
     </main>
@@ -183,6 +182,13 @@
         <p>&copy; 2022</p>
       </div>
     </footer>
+    <!--<script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>-->
+
     <script src="/script.js"></script>
   </body>
 </html>

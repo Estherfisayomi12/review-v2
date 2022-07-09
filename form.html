@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+    <title>Review &mdash; Review replicate</title>
+  </head>
+  <body class="form-container">
+    <nav class="form-nav">
+      <div>
+        <a class="nav__item-1" href="/index.html">Home</a>
+      </div>
+      <div class="nav-submission">
+        <svg class="main__handles--sub">
+          <use xlink:href="img/sprite.svg#icon-folder-minus"></use>
+        </svg>
+        <a href="" class="nav__item-2" target="_blank" id="viewSubmission"
+          >View your submissions</a
+        >
+      </div>
+    </nav>
+
+    <!--header-->
+    <!-- <header class="main__heading--1 logo">Replicate :)</header> -->
+
+    <!--form-->
+    <form
+      class="form"
+      enctype="multipart/form-data"
+      id="signup"
+      action="https://formsubmit.co/fisayomi2602@gmail.com"
+      method="POST"
+    >
+      <div class="form__head">
+        <h1 class="main__heading--1">Welcome!</h1>
+        <p>Let's have your submission</p>
+      </div>
+
+      <div class="form-field">
+        <small></small>
+        <label for="email">Email</label>
+        <input
+          name="email"
+          type="email"
+          id="email"
+          class="form-field"
+          placeholder="Your Email"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <small></small>
+        <label for="cover-letter">Cover Letter</label>
+        <textarea
+          name="cover-letter"
+          id="cover-letter"
+          cols="30"
+          rows="10"
+          placeholder="Your Cover Letter"
+          required
+          minlength="100"
+          maxlength="300"
+        ></textarea>
+      </div>
+
+      <div class="form-field upload">
+        <label for="file">File upload</label>
+        <!-- <label for="fileUpload" class="file-upload">Choose file</label> -->
+        <small></small>
+        <input
+          type="file"
+          id="fileUpload"
+          class="file-upload"
+          onchange="return fileValidation()"
+          required
+        />
+        <p>Acceptable file types: pdf, doc, docx</p>
+      </div>
+
+      <div class="form-field checkbox">
+        <input type="checkbox" id="allegiance" required />
+        <label for="allegiance"
+          >This work is entirely my own, and violates no copyrights</label
+        >
+      </div>
+
+      <div class="form-field">
+        <input type="text" name="file" id="fileUrl" value="" class="hidden" />
+      </div>
+
+      <button
+        type="submit"
+        id="submitForm"
+        class="main__account--button form-button"
+      >
+        Submit
+      </button>
+
+      <p class="center">
+        By submitting, you agree to our
+        <a class="a-red" href="#">terms of service</a> and
+        <a class="a-red" href="#">privacy policy</a>
+      </p>
+    </form>
+
+    <!--footer-->
+    <footer class="footer-form">
+      <a href="/index.html">Powered by replicate</a>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!--<script type="module" src="/module.js"></script>-->
+
+    <script type="text/javascript" src="/script.js"></script>
+  </body>
+</html>
