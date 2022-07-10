@@ -73,12 +73,12 @@
 
       <div class="form-field upload">
         <label for="file">File upload</label>
-        <!-- <label for="fileUpload" class="file-upload">Choose file</label> -->
+        <label for="fileUpload" class="file-upload">Choose file</label>
         <small id="file-error"></small>
         <input
           type="file"
           id="fileUpload"
-          class="file-upload"
+          class="hidden"
           onchange="return fileValidation()"
         />
         <p>Acceptable file types: pdf, doc, docx</p>

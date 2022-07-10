@@ -87,7 +87,10 @@ form.onchange = async (e) => {
       document.querySelector("#file-error").innerHTML = "File limit is 1MB!";
       return false;
     } else {
+      document.querySelector("#file-error").innerHTML = "";
       let file = files[i];
+      document.querySelector(".file-upload").textContent = form.value;
+
       formData.append("file", file);
       formData.append("upload_preset", "bc04kr0f");
 
