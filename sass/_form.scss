@@ -34,16 +34,21 @@
     margin: 0 13rem;
   }
   @media only screen and(max-width: $bp-small) {
-    margin: 0 6rem;
+    margin: 0 3rem;
+    padding: 2rem;
   }
 
   @media only screen and(max-width: 400px) {
-    margin: 0 1rem;
+    margin: 0rem;
+    padding: 1rem;
+    row-gap: 0rem;
   }
   display: flex;
   flex-direction: column;
   padding: 4rem;
+
   row-gap: 3rem;
+
   border-radius: 10px;
 
   background-color: aliceblue;
@@ -72,27 +77,40 @@
 .form-field {
   display: flex;
   flex-direction: column;
+
   row-gap: 0.5rem;
   background-color: white;
   border-radius: 10px;
+
+  @media only screen and(max-width: 400px) {
+    margin-top: 3rem;
+    padding: 0;
+  }
+
+  input,
+  textarea {
+    padding: 1.5rem;
+    @media only screen and(max-width: 400px) {
+      padding: 0.5rem 1.5rem 3rem 1.5rem;
+      margin-top: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.border {
+  border: 0.1px solid rgba(black, 0.2);
 }
 
 .sign-up {
   text-align: center;
 }
 
-input,
-textarea {
-  padding: 1.5rem;
-
-  &:focus {
-    outline: none;
-  }
-}
-
 #email,
 #cover-letter {
-  box-shadow: 0 3px 1px rgba(rgb(32, 32, 32), 0.1);
   border: none;
   width: 100%;
   border-radius: 10px;
@@ -161,6 +179,11 @@ p {
 
   @media only screen and(max-width: $bp-medium) {
     margin-bottom: 1rem;
+  }
+
+  @media only screen and(max-width: 400px) {
+    margin-bottom: 1rem;
+    margin-top: 3rem;
   }
 
   a,

@@ -38,6 +38,7 @@
       id="signup"
       action="https://formsubmit.co/fisayomi2602@gmail.com"
       method="POST"
+      onsubmit="return formValidation()"
     >
       <div class="form__head">
         <h1 class="main__heading--1">Welcome!</h1>
@@ -45,7 +46,7 @@
       </div>
 
       <div class="form-field">
-        <small></small>
+        <small id="email-error"></small>
         <label for="email">Email</label>
         <input
           name="email"
@@ -53,12 +54,11 @@
           id="email"
           class="form-field"
           placeholder="Your Email"
-          required
         />
       </div>
 
       <div class="form-field">
-        <small></small>
+        <small id="cover-error"></small>
         <label for="cover-letter">Cover Letter</label>
         <textarea
           name="cover-letter"
@@ -66,7 +66,6 @@
           cols="30"
           rows="10"
           placeholder="Your Cover Letter"
-          required
           minlength="100"
           maxlength="300"
         ></textarea>
@@ -75,22 +74,24 @@
       <div class="form-field upload">
         <label for="file">File upload</label>
         <!-- <label for="fileUpload" class="file-upload">Choose file</label> -->
-        <small></small>
+        <small id="file-error"></small>
         <input
           type="file"
           id="fileUpload"
           class="file-upload"
           onchange="return fileValidation()"
-          required
         />
         <p>Acceptable file types: pdf, doc, docx</p>
       </div>
 
-      <div class="form-field checkbox">
-        <input type="checkbox" id="allegiance" required />
-        <label for="allegiance"
-          >This work is entirely my own, and violates no copyrights</label
-        >
+      <div>
+        <div class="form-field checkbox">
+          <input type="checkbox" id="allegiance" />
+          <label for="allegiance"
+            >This work is entirely my own, and violates no copyrights</label
+          >
+        </div>
+        <small id="allegiance-error"></small>
       </div>
 
       <div class="form-field">

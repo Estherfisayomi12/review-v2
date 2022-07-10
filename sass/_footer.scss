@@ -21,6 +21,10 @@
     row-gap: 1rem;
   }
 
+  @media only screen and(max-width: 400px) {
+    padding: 3rem 0;
+  }
+
   padding: 0rem 2rem;
   border-top: 1px solid #eaeaea;
   font-size: 1.5rem;
@@ -43,6 +47,9 @@
   }
 
   &__first-half {
+    @media only screen and(max-width: 400px) {
+      margin-bottom: 3rem;
+    }
     svg {
       fill: white;
       width: 2rem;

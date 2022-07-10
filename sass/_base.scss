@@ -81,5 +81,6 @@ body {
   @media only screen and(max-width: $bp-large) {
     display: flex;
     flex-direction: column;
+    row-gap: 3rem;
   }
 }
