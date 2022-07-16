@@ -1,68 +1,68 @@
 .footer {
-  background-color: white;
+	background-color: white;
 
-  grid-column: full-start / full-end;
-  grid-row: 3/4;
+	grid-column: full-start / full-end;
+	grid-row: 3/4;
 
-  @media only screen and(max-width: $bp-large) {
-    grid-column: col-start 1 / col-end 12;
-  }
+	@media only screen and(max-width: $bp-large) {
+		grid-column: col-start 1 / col-end 12;
+	}
 
-  @media only screen and(max-width: $bp-medium) {
-    grid-column: col-start 1 / col-end 10;
-  }
+	@media only screen and(max-width: $bp-medium) {
+		grid-column: col-start 1 / col-end 10;
+	}
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-  @media only screen and(max-width: $bp-small) {
-    flex-direction: column;
-    row-gap: 1rem;
-  }
+	@media only screen and(max-width: $bp-small) {
+		flex-direction: column;
+		row-gap: 1rem;
+	}
 
-  @media only screen and(max-width: 400px) {
-    padding: 3rem 0;
-  }
+	@media only screen and(max-width: 400px) {
+		padding: 3rem 0;
+	}
 
-  padding: 0rem 2rem;
-  border-top: 1px solid #eaeaea;
-  font-size: 1.5rem;
-  color: rgba($color-grey-dark, 0.7);
+	padding: 0rem 2rem;
+	border-top: 1px solid #eaeaea;
+	font-size: 1.5rem;
+	color: rgba($color-grey-dark, 0.7);
 
-  a,
-  :active,
-  :visited {
-    color: rgba($color-grey-dark, 0.7);
-    text-decoration: none;
-  }
+	a,
+	:active,
+	:visited {
+		color: rgba($color-grey-dark, 0.7);
+		text-decoration: none;
+	}
 
-  & > * {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    svg {
-      fill: red;
-    }
-  }
+	& > * {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		svg {
+			fill: #356b44;
+		}
+	}
 
-  &__first-half {
-    @media only screen and(max-width: 400px) {
-      margin-bottom: 3rem;
-    }
-    svg {
-      fill: white;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      background-color: red;
-      padding: 3px;
-    }
-  }
+	&__first-half {
+		@media only screen and(max-width: 400px) {
+			margin-bottom: 3rem;
+		}
+		svg {
+			fill: white;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 50%;
+			background-color: #356b44;
+			padding: 3px;
+		}
+	}
 
-  &__second-half {
-    a {
-      text-decoration: underline;
-    }
-  }
+	&__second-half {
+		a {
+			text-decoration: underline;
+		}
+	}
 }
