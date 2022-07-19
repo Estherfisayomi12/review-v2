@@ -7,8 +7,8 @@
  */
 export const fileValidation = (
   file({ type: string, size: number }),
-  toast(any)
-) =>{
+) => {
+
   const isValidFile =
     file.type === "image/jpeg" ||
     file.type === "image/png" ||
