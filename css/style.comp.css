@@ -177,19 +177,23 @@ body {
 .authorProfile {
   display: grid;
   align-items: start; }
-
-.authorProfile img {
-  width: 20%;
-  border-radius: 50%;
-  align-self: flex-start; }
-
-.authorProfile h1 {
-  font-size: 2.3rem; }
+  .authorProfile img {
+    width: 10rem;
+    border-radius: 50%;
+    align-self: flex-start; }
+  .authorProfile h1 {
+    font-size: 2.3rem; }
 
 .profile {
+  background-color: #f4fff7;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  transform: skewX(-10deg);
   display: flex;
   align-items: center;
   text-align: center; }
+  .profile > * {
+    transform: skewX(10deg); }
   @media only screen and (max-width: 37.5em) {
     .profile {
       flex-direction: column; } }
@@ -198,8 +202,7 @@ body {
   display: grid;
   justify-content: center;
   text-align: left;
-  margin-left: 2rem;
-  margin-bottom: 8rem; }
+  margin-left: 2rem; }
 
 .main__account--button,
 .main__account--button:visited,
