@@ -175,15 +175,11 @@
   }
 }
 
-.dropdown {
-  display: grid;
-  justify-content: center;
-  width: 100rem;
-}
-
 .authorProfile {
   display: grid;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+  padding: 3rem;
 
   img {
     width: 10rem;
@@ -194,12 +190,23 @@
   h1 {
     font-size: 2.3rem;
   }
+
+  a,
+  a:active,
+  a:visited {
+    color: $color-grey-dark;
+
+    :hover {
+      color: $color-brand-green;
+    }
+  }
 }
 
 .profile {
+  width: 100%;
   background-color: #f4fff7;
   padding: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   transform: skewX(-10deg);
   display: flex;
   align-items: center;
@@ -207,16 +214,64 @@
 
   & > * {
     transform: skewX(10deg);
+    align-items: center;
+    justify-content: center;
   }
   @media only screen and(max-width: $bp-small) {
     flex-direction: column;
   }
 }
 
-.profilecontent {
-  display: grid;
-  justify-content: center;
+.imgprofile img {
+  width: 100%;
+}
 
-  text-align: left;
-  margin-left: 2rem;
+.name {
+  grid-column: new-col-start 1 / new-col-end 8;
+  font-size: 1.8rem;
+
+  @media only screen and(max-width: $bp-small) {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.content {
+  grid-column: new-col-start 4 / new-col-end 8;
+
+  display: flex;
+  font-size: 1.7rem;
+}
+
+.imgprofile {
+  grid-column: new-col-start 1 / new-col-end 3;
+
+  img {
+    width: 70%;
+
+    border-radius: 50%;
+
+    @media only screen and(max-width: $bp-small) {
+      width: 50%;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.abiodun {
+  padding-top: 10rem;
+  padding-bottom: 45rem;
+
+  @media only screen and(max-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+    & > * {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.extra {
+  color: $color-brand-green !important;
 }

@@ -169,40 +169,81 @@ body {
     .main__account a {
       text-decoration: none; }
 
-.dropdown {
-  display: grid;
-  justify-content: center;
-  width: 100rem; }
-
 .authorProfile {
   display: grid;
-  align-items: start; }
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding: 3rem; }
   .authorProfile img {
     width: 10rem;
     border-radius: 50%;
     align-self: flex-start; }
   .authorProfile h1 {
     font-size: 2.3rem; }
+  .authorProfile a,
+  .authorProfile a:active,
+  .authorProfile a:visited {
+    color: #3f3f3f; }
+    .authorProfile a :hover,
+    .authorProfile a:active :hover,
+    .authorProfile a:visited :hover {
+      color: #356b44; }
 
 .profile {
+  width: 100%;
   background-color: #f4fff7;
   padding: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   transform: skewX(-10deg);
   display: flex;
   align-items: center;
   text-align: center; }
   .profile > * {
-    transform: skewX(10deg); }
+    transform: skewX(10deg);
+    align-items: center;
+    justify-content: center; }
   @media only screen and (max-width: 37.5em) {
     .profile {
       flex-direction: column; } }
 
-.profilecontent {
-  display: grid;
-  justify-content: center;
-  text-align: left;
-  margin-left: 2rem; }
+.imgprofile img {
+  width: 100%; }
+
+.name {
+  grid-column: new-col-start 1 / new-col-end 8;
+  font-size: 1.8rem; }
+  @media only screen and (max-width: 37.5em) {
+    .name {
+      font-size: 1.6rem;
+      margin-bottom: 3rem; } }
+
+.content {
+  grid-column: new-col-start 4 / new-col-end 8;
+  display: flex;
+  font-size: 1.7rem; }
+
+.imgprofile {
+  grid-column: new-col-start 1 / new-col-end 3; }
+  .imgprofile img {
+    width: 70%;
+    border-radius: 50%; }
+    @media only screen and (max-width: 37.5em) {
+      .imgprofile img {
+        width: 50%;
+        margin-bottom: 3rem; } }
+
+.abiodun {
+  padding-top: 10rem;
+  padding-bottom: 45rem; }
+  @media only screen and (max-width: 37.5em) {
+    .abiodun {
+      display: flex;
+      flex-direction: column; }
+      .abiodun > * {
+        display: flex;
+        justify-content: center; } }
+
+.extra {
+  color: #356b44 !important; }
 
 .main__account--button,
 .main__account--button:visited,
@@ -484,7 +525,9 @@ small {
     column-gap: 1rem;
     opacity: 0.7; }
   .nav__logo {
-    height: 40px; }
+    height: 40px;
+    align-self: center;
+    margin-top: 0.5rem; }
   .nav a,
   .nav a:active,
   .nav a:visited {
