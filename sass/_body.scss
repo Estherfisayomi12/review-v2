@@ -121,6 +121,8 @@
 
       ul,
       ol {
+        font-family: Georgia, "Times New Roman", Times, serif;
+
         margin-left: 4rem;
       }
     }
@@ -146,6 +148,14 @@
 
     grid-column: new-col-start 2 / new-col-end 7;
 
+    @media only screen and(max-width: $bp-medium) {
+      grid-column: new-col-start 1 / new-col-end 8;
+    }
+
+    @media only screen and(max-width: $bp-small) {
+      grid-column: new-full-start / new-full-end;
+    }
+
     font-size: 1.6rem;
 
     display: grid;
@@ -156,7 +166,7 @@
     padding: 7rem 0;
 
     @media only screen and(max-width: $bp-tiny) {
-      padding: 3rem 0;
+      padding: 5rem 0;
     }
 
     a {
@@ -174,21 +184,42 @@
 .authorProfile {
   display: grid;
   align-items: start;
-  img {
-    width: 20%;
-    border-radius: 50%;
-    align-self: flex-start;
-  }
-
-  h1 {
-    font-size: 2.3rem;
-  }
 }
+
+.imgprofile {
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  transform: translateX(-3rem) skewX(12deg);
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+
+  width: 20%;
+  border-radius: 50%;
+  align-self: flex-start;
+}
+
+.authorProfile h1 {
+  font-size: 2.3rem;
+}
+
 .profile {
+  background-color: #f4fff7;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transform: skewX(-10deg);
   display: flex;
   align-items: center;
   text-align: center;
 
+  & > * {
+    transform: skewX(10deg);
+  }
   @media only screen and(max-width: $bp-small) {
     flex-direction: column;
   }

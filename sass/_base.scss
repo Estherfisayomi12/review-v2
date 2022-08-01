@@ -1,31 +1,4 @@
-@font-face {
-  font-family: "Georgia Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Georgia Regular"), url("georgia.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Georgia Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Georgia Italic"), url("georgiai.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Georgia Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Georgia Bold"), url("georgiab.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Georgia Bold Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Georgia Bold Italic"), url("georgiaz.woff") format("woff");
-}
-
+//Colours
 $color-grey-light: rgb(241, 238, 238);
 $color-brand-green: #356b44;
 $color-grey-dark: rgb(63, 63, 63);
@@ -50,11 +23,11 @@ $bp-tiny: 18.75em; //300px
 
 html {
   box-sizing: border-box;
-  font-size: 75%;
+  font-size: 62.5%;
 }
 
 body {
-  font-family: "Georgia Regular";
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 300;
   line-height: 1.6;
   color: $color-grey-dark;
@@ -100,6 +73,8 @@ body {
 
 .form-container {
   background-color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+
   display: grid;
   grid-template-columns: repeat(
     10,
