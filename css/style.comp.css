@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Georgia Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Regular"), url("georgia.woff") format("woff"); }
+
+@font-face {
+  font-family: "Georgia Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Italic"), url("georgiai.woff") format("woff"); }
+
+@font-face {
+  font-family: "Georgia Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Bold"), url("georgiab.woff") format("woff"); }
+
+@font-face {
+  font-family: "Georgia Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Georgia Bold Italic"), url("georgiaz.woff") format("woff"); }
+
 * {
   margin: 0;
   padding: 0; }
@@ -9,10 +33,10 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 75%; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Georgia Regular";
   font-weight: 300;
   line-height: 1.6;
   color: #3f3f3f;
@@ -75,8 +99,7 @@ body {
     display: flex;
     justify-content: end;
     align-items: center;
-    column-gap: 1rem;
-    margin: 3rem 3rem 2rem 0.5rem; }
+    margin: 1rem 3rem 1rem 0.5rem; }
     @media only screen and (max-width: 37.5em) {
       .main__handles {
         grid-column: new-full-start / new-full-end; } }
@@ -90,7 +113,8 @@ body {
       border-radius: 50%;
       border: 1px solid rgba(63, 63, 63, 0.3);
       padding: 1rem;
-      text-align: center; }
+      text-align: center;
+      margin-right: 1rem; }
       @media only screen and (max-width: 18.75em) {
         .main__handles a,
         .main__handles a:active,
@@ -123,7 +147,6 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 1.6rem;
-    margin-bottom: 6rem;
     margin-bottom: 2rem; }
     @media only screen and (max-width: 50em) {
       .main__stories {
@@ -134,20 +157,22 @@ body {
     .main__stories div {
       display: flex;
       flex-direction: column;
-      margin-bottom: 1rem; }
+      margin-bottom: 4rem; }
       .main__stories div ul,
       .main__stories div ol {
-        margin-left: 5rem; }
+        margin-left: 4rem; }
     .main__stories--h1 {
       color: #3f3f3f;
       font-weight: 600; }
     .main__stories--h2 {
       font-weight: 600;
       font-size: 2.3rem;
-      margin-bottom: 0.5rem; }
+      margin-bottom: 1rem; }
+    .main__stories p {
+      margin-bottom: 1.2rem; }
   .main__account {
     border-top: 1px solid rgba(0, 0, 0, 0.15);
-    grid-column: new-full-start/ new-full-end;
+    grid-column: new-col-start 2 / new-col-end 7;
     font-size: 1.6rem;
     display: grid;
     justify-content: center;
@@ -159,6 +184,36 @@ body {
         padding: 3rem 0; } }
     .main__account a {
       text-decoration: none; }
+
+.dropdown {
+  display: grid;
+  justify-content: center;
+  width: 100rem; }
+
+.authorProfile {
+  display: grid;
+  align-items: start; }
+  .authorProfile img {
+    width: 20%;
+    border-radius: 50%;
+    align-self: flex-start; }
+  .authorProfile h1 {
+    font-size: 2.3rem; }
+
+.profile {
+  display: flex;
+  align-items: center;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .profile {
+      flex-direction: column; } }
+
+.profilecontent {
+  display: grid;
+  justify-content: center;
+  text-align: left;
+  margin-left: 2rem;
+  margin-bottom: 8rem; }
 
 .main__account--button,
 .main__account--button:visited,
@@ -211,7 +266,8 @@ body {
   .footer :active,
   .footer :visited {
     color: rgba(63, 63, 63, 0.7);
-    text-decoration: none; }
+    text-decoration: none;
+    margin-left: 1rem; }
   .footer > * {
     display: flex;
     align-items: center;
@@ -220,7 +276,7 @@ body {
       fill: #356b44; }
   @media only screen and (max-width: 400px) {
     .footer__first-half {
-      margin-bottom: 3rem; } }
+      margin-bottom: 2rem; } }
   .footer__first-half svg {
     fill: white;
     width: 2rem;
@@ -445,4 +501,5 @@ small {
     color: #356b44;
     font-weight: 600; }
   .nav__item-2 {
-    color: #3f3f3f; }
+    color: #3f3f3f;
+    margin-left: 1rem; }
